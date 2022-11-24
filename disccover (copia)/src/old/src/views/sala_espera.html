@@ -1,0 +1,64 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/sala.css">
+        <title>Sala de Espera</title>
+    </head>
+    <body>
+      <div class="navbar-container">
+        <img class="logo" src="../images/logo-dark.svg" alt="logo">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="comojugar.html">Cómo Jugar</a></li>
+          <li><a href="nosotros.html">Nosotres</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="navbar-spacer">
+        </div>
+        <a href="http://localhost:3000/registro"><button class="iniciar-sesion">INICIAR SESIÓN</button></a>
+        <a href="http://localhost:3000/registro"><button class= "registrarse">REGISTRARSE</button></a>
+      </div>
+        <h1 class="titles">Nombre Sala</h1>
+        <h2 class="titles">Código: WDZ-2m3</h2>
+        
+        <div class="list-wrapper" ng-app="app" ng-controller="MainCtrl as ctrl">
+            <ul class="list">
+              <li class="list-item">
+                <div>
+                  <img src="../images/pngegg (8).png" class="list-item-image">
+                </div>
+                <div class="list-item-content">
+                  <h4>Juan Pablo Sanchez</h4>
+                </div>
+              </li>
+              <li class="list-item">
+                <div>
+                  <img src="../images/pngegg (8).png" class="list-item-image">
+                </div>
+                <div class="list-item-content">
+                  <h4>Allan Baus</h4>
+                </div>
+              </li>
+              <li class="list-item">
+                <div>
+                  <img src="../images/pngegg (8).png" class="list-item-image">
+                </div>
+                <div class="list-item-content">
+                  <h4>Florencia Baeza</h4>
+                </div>
+              </li> 
+              <p> Esperando jugadores... </p>
+              <div class="loader"></div>
+            </ul>
+            
+        </div>
+        <form action="landing_usuario.html">
+            <input class="buttons" type="submit" value="Abandonar Sala">
+        </form>
+        <form action="personajes.html">
+          <input class="buttons" type="submit" value="Jugar">
+      </form>
+    </body>
+
+</html>

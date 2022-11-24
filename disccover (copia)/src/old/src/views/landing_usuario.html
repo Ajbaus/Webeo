@@ -1,0 +1,60 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/landing_usuario.css">
+        
+        <title>Bienvenido</title>
+    </head>
+
+    <div class="navbar-container">
+        <img class="logo" src="../images/logo-dark.svg" alt="logo">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="comojugar.html">Cómo Jugar</a></li>
+          <li><a href="nosotros.html">Nosotres</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="navbar-spacer">
+        </div>
+        <a href="http://localhost:3000/registro"><button class="iniciar-sesion">INICIAR SESIÓN</button></a>
+        <a href="http://localhost:3000/registro"><button class= "registrarse">REGISTRARSE</button></a>
+      </div>
+
+    <div class="formSalas">
+        <div class="row">
+            <div id="columnIzquierda" class="column">
+                <h2 class="titles">Crear sala</h2>
+                <div class="form">
+                    <form action="sala_espera.html">
+                        <label class="items" for="Nombre">Nombre de la sala:</label><br>
+                        <input class="items" type="text" id="Nombre" name="Nombre" ><br>
+                        <p></p>
+                        <input class="items" type="checkbox" id="Sala Privada" name="Sala Privada"><label class="items" for="Sala Privada">Sala privada</label><br>
+                        <p></p>
+                        <input class="buttons" type="submit" value="Crear">
+                    </form>
+                </div>
+            </div>
+            <div id="columnDerecha" class="column">
+                <h2 class="titles">Unirse a una sala</h2>
+                <p>Puedes unirte a una sala ya creada a través de su código.</p>
+                <div class="form">
+                    <form action="sala_espera.html">
+                        <label class="items" for="Codigo">Código de la sala:</label><br>
+                        <input class="items" type="text" id="Codigo" name="Codigo" ><br>
+                        <p></p>
+                        <input class="buttons" type="submit" value="Unirse a sala">
+                    </form>
+                    <p>Puedes unirte a una sala pública de manera aleatoria.</p>
+                    <form action="sala_espera.html">
+                        <p></p>
+                        <input class="buttons" type="submit" value="Unirse a sala aleatoria">
+                    </form>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</html>

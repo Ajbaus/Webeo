@@ -1,0 +1,866 @@
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+body{
+  background-color: #F0ECE3;
+  color: black;
+}
+
+.main-hexagon-gallery {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 14px;
+  padding-bottom: 50px;
+}
+
+.main-hex {
+  display: flex;
+  position: relative;
+  width: 240px;
+  height: 265px;
+  background-color: #262E33;
+  box-shadow: black 0px 10px 30px 0px;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+}
+
+.main-hex:first-child {
+  grid-row-start: 1;
+  grid-column: 2 / span 19;
+}
+
+.main-hex:nth-child(2) {
+  grid-row-start: 1;
+  grid-column: 4 / span 19;
+}
+
+.main-hex:nth-child(3) {
+  grid-row-start: 2;
+  grid-column: 1 / span 19;
+}
+
+.main-hex:nth-child(4) {
+  grid-row-start: 2;
+  grid-column: 3 / span 19;
+}
+
+.main-hex:nth-child(5) {
+  grid-row-start: 2;
+  grid-column: 5 / span 19;
+}
+
+.main-hex:nth-child(6) {
+  grid-row-start: 3;
+  grid-column: 2 / span 19;
+}
+
+.main-hex:nth-child(7) {
+  grid-row-start: 3;
+  grid-column: 4 / span 19;
+}
+
+
+
+.icon{
+  
+  width: 50px;
+  height: 50px;
+}
+
+.recurso{
+  display: flex;
+  margin: 0px auto;
+}
+
+.recursos{
+  width: 160px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #DFD3C3;
+  box-shadow: black 0px 10px 30px 0px;
+  text-align: center;
+  padding-left: 10px;
+}
+.contenedorInferior{
+  display: flex;
+  margin: 60px;
+}
+.acciones{
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #DFD3C3;
+  box-shadow: black 0px 10px 30px 0px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-left: 50px;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;;
+  
+}
+
+.minimapa{
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #DFD3C3;
+  box-shadow: black 0px 10px 30px 0px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  
+}
+
+.divSuperior{
+  display: flex;
+}
+
+.personajes{
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #DFD3C3;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: black 0px 10px 30px 0px;
+  text-align: center;
+  padding-left: 10px;
+  margin-top: 40px;
+  margin-left: auto;
+  width: 250px;
+  height: 335px;
+
+}
+
+.personaje {
+  text-align: left;
+  margin: 8px;
+  margin-bottom: 0px;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.boton_progreso{
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  
+}
+
+.barra{
+  width: 30px;
+  height: 20px;
+  border-color: #16437E;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 16px;
+  margin-right: 6px;
+
+}
+
+
+.boton-0 {
+  align-items: center;
+  background-color: #596E79;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 70px;
+  max-height: 30px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+.boton-0:hover,
+.boton-0:focus { 
+  background-color: #596E79;
+  color: black;
+}
+
+.boton-0:active {
+  background: #262E33;
+  color: rgb(255, 255, 255, .7);
+}
+
+.boton-0:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+
+.boton-1 {
+  align-items: center;
+  background-color: #596E79;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  width: 90px;
+  height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+.boton-1:hover,
+.boton-1:focus { 
+  background-color: #596E79;
+  color: black;
+}
+
+.boton-1:active {
+  background: #262E33;
+  color: rgb(255, 255, 255, .7);
+}
+
+.boton-1:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+.boton-2 {
+  align-items: center;
+  background-color: #596E79;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 200px;
+  height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+.boton-2:hover,
+.boton-2:focus { 
+  background-color: #596E79;
+  color: black;
+}
+
+.boton-2:active {
+  background: #262E33;
+  color: rgb(255, 255, 255, .7);
+}
+
+.boton-2:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+.boton-3 {
+  margin-top: 140px;
+  align-items: center;
+  background-color: #596E79;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 200px;
+  height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+.boton-3:hover,
+.boton-3:focus { 
+  background-color: #596E79;
+  color: black;
+}
+
+.boton-3:active {
+  background: #262E33;
+  color: rgb(255, 255, 255, .7);
+}
+
+.boton-3:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+.tablero{
+  width: 1000px;
+  margin-left: 200px;
+  position: absolute;
+  left: 100px;
+  top: 80px;
+
+}
+
+.divMitad{
+  display: flex;
+  justify-content: space-between;
+}
+
+#titulo{
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* https://getcssscan.com/css-buttons-examples */
+
+
+
+
+
+
+/* ----- Mini Mapa ----- */
+
+
+.hexagon-gallery {
+  margin: auto;
+  margin-top: 25px;
+  margin-left: 0px;
+  max-width: 250px;
+  display: grid;
+  grid-template-columns: repeat(26, 1fr);
+  grid-auto-rows: 19px;
+  grid-gap: 3px;
+  padding-bottom: 50px;
+}
+
+.hex {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 26px;
+  background-color: #424242;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex:nth-child(1) {
+  grid-row-start: 1;
+  grid-column: 7 / span 2;
+}
+
+.hex:nth-child(2) {
+  grid-row-start: 1;
+  grid-column: 9 / span 2;
+}
+
+.hex:nth-child(3) {
+  grid-row-start: 1;
+  grid-column: 11 / span 2;
+}
+
+.hex:nth-child(4) {
+  grid-row-start: 1;
+  grid-column: 13 / span 2;
+}
+
+.hex:nth-child(5) {
+  grid-row-start: 1;
+  grid-column: 15 / span 2;
+}
+
+.hex:nth-child(6) {
+  grid-row-start: 1;
+  grid-column: 17 / span 2;
+}
+
+.hex:nth-child(7) {
+  grid-row-start: 2;
+  grid-column: 6 / span 2;
+}
+
+.hex:nth-child(8) {
+  grid-row-start: 2;
+  grid-column: 8 / span 2;
+}
+
+.hex:nth-child(9) {
+  grid-row-start: 2;
+  grid-column: 10 / span 2;
+}
+
+.hex:nth-child(10) {
+  grid-row-start: 2;
+  grid-column: 12 / span 2;
+}
+
+.hex:nth-child(11) {
+  grid-row-start: 2;
+  grid-column: 14 / span 2;
+}
+
+.hex:nth-child(12) {
+  grid-row-start: 2;
+  grid-column: 16 / span 2;
+}
+
+.hex:nth-child(13) {
+  grid-row-start: 2;
+  grid-column: 18 / span 2;
+}
+
+.hex:nth-child(14) {
+  grid-row-start: 3;
+  grid-column: 5 / span 2;
+}
+
+.hex:nth-child(15) {
+  grid-row-start: 3;
+  grid-column: 7 / span 2;
+}
+
+.hex:nth-child(16) {
+  grid-row-start: 3;
+  grid-column: 9 / span 2;
+}
+
+.hex:nth-child(17) {
+  grid-row-start: 3;
+  grid-column: 11 / span 2;
+}
+
+.hex:nth-child(18) {
+  grid-row-start: 3;
+  grid-column: 13 / span 2;
+}
+
+.hex:nth-child(19) {
+  grid-row-start: 3;
+  grid-column: 15 / span 2;
+}
+
+.hex:nth-child(20) {
+  grid-row-start: 3;
+  grid-column: 17 / span 2;
+}
+
+.hex:nth-child(21) {
+  grid-row-start: 3;
+  grid-column: 19 / span 2;
+}
+
+.hex:nth-child(22) {
+  grid-row-start: 4;
+  grid-column: 4 / span 2;
+}
+
+.hex:nth-child(23) {
+  grid-row-start: 4;
+  grid-column: 6 / span 2;
+}
+
+.hex:nth-child(24) {
+  grid-row-start: 4;
+  grid-column: 8 / span 2;
+}
+
+.hex:nth-child(25) {
+  grid-row-start: 4;
+  grid-column: 10 / span 2;
+}
+
+.hex:nth-child(26) {
+  grid-row-start: 4;
+  grid-column: 12 / span 2;
+}
+
+.hex:nth-child(27) {
+  grid-row-start: 4;
+  grid-column: 14 / span 2;
+}
+
+.hex:nth-child(28) {
+  grid-row-start: 4;
+  grid-column: 16 / span 2;
+}
+
+.hex:nth-child(29) {
+  grid-row-start: 4;
+  grid-column: 18 / span 2;
+}
+
+.hex:nth-child(30) {
+  grid-row-start: 4;
+  grid-column: 20 / span 2;
+}
+
+.hex:nth-child(31) {
+  grid-row-start: 5;
+  grid-column: 3 / span 2;
+}
+
+.hex:nth-child(32) {
+  grid-row-start: 5;
+  grid-column: 5 / span 2;
+}
+
+.hex:nth-child(33) {
+  grid-row-start: 5;
+  grid-column: 7 / span 2;
+}
+
+.hex:nth-child(34) {
+  grid-row-start: 5;
+  grid-column: 9 / span 2;
+}
+
+.hex:nth-child(35) {
+  grid-row-start: 5;
+  grid-column: 11 / span 2;
+}
+
+.hex:nth-child(36) {
+  grid-row-start: 5;
+  grid-column: 13 / span 2;
+}
+
+.hex:nth-child(37) {
+  grid-row-start: 5;
+  grid-column: 15 / span 2;
+}
+
+.hex:nth-child(38) {
+  grid-row-start: 5;
+  grid-column: 17 / span 2;
+}
+
+.hex:nth-child(39) {
+  grid-row-start: 5;
+  grid-column: 19 / span 2;
+}
+
+.hex:nth-child(40) {
+  grid-row-start: 5;
+  grid-column: 21 / span 2;
+}
+
+.hex:nth-child(41) {
+  grid-row-start: 6;
+  grid-column: 2 / span 2;
+}
+
+.hex:nth-child(42) {
+  grid-row-start: 6;
+  grid-column: 4 / span 2;
+}
+
+.hex:nth-child(43) {
+  grid-row-start: 6;
+  grid-column: 6 / span 2;
+}
+
+.hex:nth-child(44) {
+  grid-row-start: 6;
+  grid-column: 8 / span 2;
+}
+
+.hex:nth-child(45) {
+  grid-row-start: 6;
+  grid-column: 10 / span 2;
+}
+
+.hex:nth-child(46) {
+  grid-row-start: 6;
+  grid-column: 12 / span 2;
+}
+
+.hex:nth-child(47) {
+  grid-row-start: 6;
+  grid-column: 14 / span 2;
+}
+
+.hex:nth-child(48) {
+  grid-row-start: 6;
+  grid-column: 16 / span 2;
+}
+
+.hex:nth-child(49) {
+  grid-row-start: 6;
+  grid-column: 18 / span 2;
+}
+
+.hex:nth-child(50) {
+  grid-row-start: 6;
+  grid-column: 20 / span 2;
+}
+
+.hex:nth-child(51) {
+  grid-row-start: 6;
+  grid-column: 22 / span 2;
+}
+
+.hex:nth-child(52) {
+  grid-row-start: 7;
+  grid-column: 3 / span 2;
+}
+
+.hex:nth-child(53) {
+  grid-row-start: 7;
+  grid-column: 5 / span 2;
+}
+
+.hex:nth-child(54) {
+  grid-row-start: 7;
+  grid-column: 7 / span 2;
+}
+
+.hex:nth-child(55) {
+  grid-row-start: 7;
+  grid-column: 9 / span 2;
+}
+
+.hex:nth-child(56) {
+  grid-row-start: 7;
+  grid-column: 11 / span 2;
+}
+
+.hex:nth-child(57) {
+  grid-row-start: 7;
+  grid-column: 13 / span 2;
+}
+
+.hex:nth-child(58) {
+  grid-row-start: 7;
+  grid-column: 15 / span 2;
+}
+
+.hex:nth-child(59) {
+  grid-row-start: 7;
+  grid-column: 17 / span 2;
+}
+
+.hex:nth-child(60) {
+  grid-row-start: 7;
+  grid-column: 19 / span 2;
+}
+
+.hex:nth-child(61) {
+  grid-row-start: 7;
+  grid-column: 21 / span 2;
+}
+
+.hex:nth-child(62) {
+  grid-row-start: 8;
+  grid-column: 4 / span 2;
+}
+
+.hex:nth-child(63) {
+  grid-row-start: 8;
+  grid-column: 6 / span 2;
+}
+
+.hex:nth-child(64) {
+  grid-row-start: 8;
+  grid-column: 8 / span 2;
+}
+
+.hex:nth-child(65) {
+  grid-row-start: 8;
+  grid-column: 10 / span 2;
+}
+
+.hex:nth-child(66) {
+  grid-row-start: 8;
+  grid-column: 12 / span 2;
+}
+
+.hex:nth-child(67) {
+  grid-row-start: 8;
+  grid-column: 14 / span 2;
+}
+
+.hex:nth-child(68) {
+  grid-row-start: 8;
+  grid-column: 16 / span 2;
+}
+
+.hex:nth-child(69) {
+  grid-row-start: 8;
+  grid-column: 18 / span 2;
+}
+
+.hex:nth-child(70) {
+  grid-row-start: 8;
+  grid-column: 20 / span 2;
+}
+
+.hex:nth-child(71) {
+  grid-row-start: 9;
+  grid-column: 5 / span 2;
+}
+
+.hex:nth-child(72) {
+  grid-row-start: 9;
+  grid-column: 7 / span 2;
+}
+
+.hex:nth-child(73) {
+  grid-row-start: 9;
+  grid-column: 9 / span 2;
+}
+
+.hex:nth-child(74) {
+  grid-row-start: 9;
+  grid-column: 11 / span 2;
+}
+
+.hex:nth-child(75) {
+  grid-row-start: 9;
+  grid-column: 13 / span 2;
+}
+
+.hex:nth-child(76) {
+  grid-row-start: 9;
+  grid-column: 15 / span 2;
+}
+
+.hex:nth-child(77) {
+  grid-row-start: 9;
+  grid-column: 17 / span 2;
+}
+
+.hex:nth-child(78) {
+  grid-row-start: 9;
+  grid-column: 19 / span 2;
+}
+
+.hex:nth-child(79) {
+  grid-row-start: 10;
+  grid-column: 6 / span 2;
+}
+
+.hex:nth-child(80) {
+  grid-row-start: 10;
+  grid-column: 8 / span 2;
+}
+
+.hex:nth-child(81) {
+  grid-row-start: 10;
+  grid-column: 10 / span 2;
+}
+
+.hex:nth-child(82) {
+  grid-row-start: 10;
+  grid-column: 12 / span 2;
+}
+
+.hex:nth-child(83) {
+  grid-row-start: 10;
+  grid-column: 14 / span 2;
+}
+
+.hex:nth-child(84) {
+  grid-row-start: 10;
+  grid-column: 16 / span 2;
+}
+
+.hex:nth-child(85) {
+  grid-row-start: 10;
+  grid-column: 18 / span 2;
+}
+
+.hex:nth-child(86) {
+  grid-row-start: 11;
+  grid-column: 7 / span 2;
+}
+
+.hex:nth-child(87) {
+  grid-row-start: 11;
+  grid-column: 9 / span 2;
+}
+
+.hex:nth-child(88) {
+  grid-row-start: 11;
+  grid-column: 11 / span 2;
+}
+
+.hex:nth-child(89) {
+  grid-row-start: 11;
+  grid-column: 13 / span 2;
+}
+
+.hex:nth-child(90) {
+  grid-row-start: 11;
+  grid-column: 15 / span 2;
+}
+
+.hex:nth-child(91) {
+  grid-row-start: 11;
+  grid-column: 17 / span 2;
+}

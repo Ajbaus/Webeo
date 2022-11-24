@@ -1,0 +1,26 @@
+
+.divSuperior{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+.recursos{
+    width: 160px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #DFD3C3;
+    box-shadow: black 0px 10px 30px 0px;
+    text-align: center;
+    padding-left: 10px;
+  }
+
+.recurso{
+    display: flex;
+    margin: 0px auto;
+  }
+
+.icon{
+  
+    width: 50px;
+    height: 50px;
+  }

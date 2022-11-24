@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: #DCD7C9;
+}
+
+
+
+.contenido{
+    
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    margin-top: 200px;
+}
+.contenedorFondo{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: #DFD3C3;
+    border: 1px solid #3F4E4F;
+    
+}
+.contenedorFondo div{
+    margin: 100px 40px;
+    color: #596E79;
+    transition: all 500ms;
+
+}
+.contenedorFondo div button{
+    margin-top: 30px;
+
+}
+.forms div h3{
+    font-weight: 400;
+}
+
+.contenedorFondo button{
+    padding: 10px 40px;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #596E79;
+    outline: none;
+    transition: all 300ms;
+}
+
+.contenedorFondo button:hover{
+    background: #F5DBC9;
+    color: rgb(53, 53, 153);
+}
+.forms{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -157px;
+    left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.27);
+}
+.forms form{
+    padding: 80px 20px;
+    background: #596E79;
+    position: absolute;
+    border-radius: 20px;
+}
+.forms form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white
+}
+.forms form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2 ;
+    font-size: 16px;
+    outline: none;
+}
+.forms form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 15px;
+    background: rgb(99, 99, 199);
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.formLogin{
+    opacity: 1;
+    display: block;
+}
+.formRegistro{
+    display: none;
+}
+
+@media screen and (max-width: 850px){
+    .contenido{
+        margin-top: 30px;
+        height: 1000px;
+        
+    }
+    .forms{
+        margin: auto;
+    }
+    .forms .forms{
+        position: relative;
+    }
+    .contenedorFondo{
+        position: relative;
+        max-width: 350px;
+        height: 650px;
+        flex-direction: column;
+        margin: auto;
+        
+    }
+    .formLogin{
+        opacity: 1;
+        display: none;
+    }
+    .formRegistro{
+        display: block;
+    }
+}
+
+
+

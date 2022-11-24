@@ -1,0 +1,596 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Odibee+Sans&display=swap');
+
+.div-game {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Odibee Sans', cursive;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+.div-game h3 {
+  margin: 0px;
+  font-size: 45px;
+}
+
+.div-game p {
+  font-size: 30px;
+}
+
+// CODE FROM https://codepen.io/fthyldrimm/pen/yddEpY
+
+$hex-size: 6em; // Only change size here. Best used with sizes from 5em - 10em.
+
+.container {
+  position: absolute;
+  width: 560px; 
+  line-height: 1.3;
+}
+
+ol.even {
+  position: relative;
+  left: math.div($hex-size, 1.1);
+  pointer-events: none;
+}
+
+ol.odd {
+  position: relative;
+  margin-top: -12%;
+  margin-bottom: -12%;
+  pointer-events: none;
+}
+
+.hex {
+  position: relative;
+  margin: 1em auto;
+  width: $hex-size; height: ($hex-size * 1.7);
+  border-radius: 1em/.5em;
+  background: #ccc;
+  transform: rotate(-90deg);
+  display: inline-block;
+  margin-right: math.div($hex-size, 1.3);
+  transition: all 150ms ease-in-out;
+  pointer-events: initial;
+}
+
+.hex:before, .hex:after {
+  position: absolute;
+  width: inherit; height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+}
+
+.hex:before {
+  transform: rotate(60deg);
+}
+
+.hex:after {
+  transform: rotate(-60deg);
+}
+
+
+// Game Style
+
+.game-container {
+  display: flex;
+}
+
+
+// Bard Style
+
+.div-board {
+  position: relative;
+  height: 550px;
+  width: 560px;
+}
+
+.wood-hex {
+  background: rgb(129, 89, 60);
+}
+
+.stone-hex {
+  background: rgb(143, 153, 173);
+}
+
+.gold-hex {
+  background: rgb(236, 190, 110);
+}
+
+.hidden-hex {
+  background: rgb(42, 44, 63);
+}
+
+.dragon-hex {
+  background: rgb(213, 73, 76);
+}
+
+.treasure-hex {
+  background: rgb(204, 211, 176);
+}
+
+.background-hex {
+  background: #DCD7C9;
+}
+
+.hover-hex:hover {
+  background: #555A80;
+  cursor: pointer;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  background: #000;
+}
+
+.circle-container-1 {
+  position: absolute;
+  left: 55px;
+  top: 20px;
+}
+
+.circle-container-2 {
+  position: absolute;
+  left: 85px;
+  top: 70px;
+}
+
+.circle-container-3 {
+  position: absolute;
+  left: 25px;
+  top: 70px;
+}
+
+.circles-group-1 {
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  left: 95px;
+}
+
+.circles-group-2 {
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  left: 265px;
+}
+
+.circles-group-3 {
+  pointer-events: none;
+  position: absolute;
+  top: 160px;
+  left: 5px;
+}
+
+.circles-group-4 {
+  pointer-events: none;
+  position: absolute;
+  top: 160px;
+  left: 175px;
+}
+
+.circles-group-5 {
+  pointer-events: none;
+  position: absolute;
+  top: 160px;
+  left: 350px;
+}
+
+.circles-group-6 {
+  pointer-events: none;
+  position: absolute;
+  top: 310px;
+  left: 95px;
+}
+
+.circles-group-7 {
+  pointer-events: none;
+  position: absolute;
+  top: 310px;
+  left: 265px;
+}
+
+.hidden-group {
+  display: none;
+}
+
+.player-circles-group .circle-container-1 .circle,
+.player-circles-group .circle-container-2 .circle,
+.player-circles-group .circle-container-3 .circle {
+  border: solid 2px white;
+  line-height: 0px;
+}
+
+.player-circles-group .circle-container-1 p,
+.player-circles-group .circle-container-2 p,
+.player-circles-group .circle-container-3 p {
+  margin-top: 25px;
+}
+
+.player-circles-group .circle-container-1,
+.player-circles-group .circle-container-2,
+.player-circles-group .circle-container-3 {
+  transform: translate(0px, 30px);
+}
+
+
+// ----- Resources Style -----
+
+.div-resources h3 {
+  margin-bottom: 15px;
+}
+
+.resource-container {
+  display: flex;
+  align-items: center;
+}
+
+.resource-img {
+  width: 65px;
+  margin-right: 15px;
+}
+
+
+// ----- Options Style -----
+
+.options-container {
+  display: flex;
+}
+
+.div-options p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.div-options p {
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+#heal-option {
+  display: none;
+}
+
+#gather-option {
+  display: none;
+}
+
+#pass-option {
+  display: none;
+}
+
+
+// ----- Map Style -----
+
+.map-container {
+  position: absolute;
+  width: 260px; 
+  line-height: 2.6; // modified
+}
+
+.div-map {
+  position: relative;
+  height: 250px;
+  width: 250px;
+}
+
+ol.map-row {
+  position: relative;
+  margin-top: -6.5%;
+  pointer-events: none;
+  margin-bottom: -49px;
+}
+
+ol.map-row-1 {
+  margin-top: 0;
+  left: 48px;
+}
+
+ol.map-row-2 {
+  left: 36px;
+}
+
+ol.map-row-3 {
+  left: 24px;
+}
+
+ol.map-row-4 {
+  left: 12px;
+}
+
+ol.map-row-9 {
+  left: 48px;
+}
+
+.mini-hex {
+  position: relative;
+  margin: 1em auto;
+  width: 15px; height: 21px; // modified
+  border-radius: 4px; // modified
+  transform: rotate(-90deg);
+  display: inline-block;
+  margin-right: 9px; // modified
+  transition: all 150ms ease-in-out;
+  pointer-events: initial;
+}
+
+.mini-hex:before, .mini-hex:after {
+  position: absolute;
+  width: inherit; height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: '';
+}
+
+.mini-hex:before {
+  transform: rotate(60deg);
+}
+
+.mini-hex:after {
+  transform: rotate(-60deg);
+}
+
+.mini-circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #000;
+  top: 41px;
+  left: 78px;
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#mini-circle-1 {
+  border: 1px solid white
+}
+
+
+// ----- Team Style -----
+
+.characters-container {
+  display: flex;
+}
+
+.character-img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.character-img:hover {
+  cursor: pointer;
+}
+
+.characters-container .stats-text {
+  font-size: 20px;
+}
+
+.game-character {
+  margin-right: 25px;
+}
+
+.see-char-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.energy-bars-container {
+  display: flex;
+}
+
+.energy-bar {
+  margin-right: 10px;
+  width: 50px;
+  height: 25px;
+  border-radius: 8px;
+  background-color: rgb(242, 223, 99);
+  border: solid 2px rgb(238, 212, 85);
+}
+
+#character-name-1, #character-name-2, #character-name-3,
+#character-img-1, #character-img-2, #character-img-3 {
+  display: none;
+}
+
+.char-level-container {
+  background-color: rgb(42, 44, 63);
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+}
+
+
+// ----- Gems Style -----
+
+.gems-container {
+  display: flex;
+  align-items: center;
+}
+
+.gem-logo {
+  width: 35px;
+  position: relative;
+}
+
+.plus-logo {
+  width: 35px;
+}
+
+.gems-bar {
+  width: 100px;
+  background-color: rgb(42, 44, 63);
+  margin: 0 -20px;
+}
+
+.gems-bar p {
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 25px;
+}
+
+
+// ----- Account Info Style -----
+
+.div-account-info {
+  margin: 50px;
+}
+
+
+// ----- Modal Style -----
+
+// CODE FROM https://www.w3schools.com/howto/howto_css_modals.asp
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 50px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: -25px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.outer-progress-bar {
+  height: 20px;
+  width: 450px;
+  border: solid 2px rgb(42, 44, 63);;
+  border-radius: 5px;
+  position: relative;
+  margin-top: -20px;
+}
+
+.inner-progress-bar {
+  height: 20px;
+  background-color: #555A80;
+  position: absolute;
+  border-radius: 5px;
+  margin-top: -20px;
+}
+
+.modal-container {
+  display: flex;
+}
+
+.character-img-modal {
+  width: 150px;
+}
+
+.character-div-modal {
+  text-align: center;
+  margin-left: 100px;
+}
+
+.modal-level-container {
+  background-color: rgb(42, 44, 63);
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#level-up-option:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#modal-message {
+  color: rgb(213, 73, 76);
+  visibility: hidden;
+  margin-top: -15px;
+}
+
+.modal-level-up-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.modal-level-up-container p {
+  margin-right: 20px;
+}
+
+.modal-resource {
+  width: 30px;
+  height: 30px;
+}
+
+
+// ----- Health Bar Style ------
+
+.health-bar-div {
+  margin-bottom: -100px;
+}
+
+.health-bar-container {
+  display: flex;
+  align-items: center;
+}
+
+.heart-logo {
+  width: 30px;
+  position: absolute;
+}
+
+.inner-health-bar {
+  height: 20px;
+  width: 250px;
+  background-color: black;
+  position: absolute;
+}
+
+.outer-health-bar {
+  height: 20px;
+  width: 350px;
+  border: solid 2px red;
+  position: relative;
+}
+
+.health-bar {
+  margin-left: 20px;
+}
